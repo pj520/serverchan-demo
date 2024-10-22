@@ -14,10 +14,12 @@ const key = data.SENDKEY;
 async function sc_send(text, desp = '', key = '[SENDKEY]') {
     const postData = querystring.stringify({ text, desp });
     // 根据 sendkey 是否以 'sctp' 开头，选择不同的 API URL
-    const url = String(key).startsWith('sctp') 
-    ? `https://${key.match(/^sctp(\d+)t/)[1]}.push.ft07.com/send/${key}.send`
+    const url = String(key).match(/^sctp(\d+)t/i) 
+    ? `https://${key.match(/^sctp(\d+)t/i)[1]}.push.ft07.com/send/${key}.send`
     : `https://sctapi.ftqq.com/${key}.send`;
   
+    console.log("url", url);
+
     const response = await fetch(url, {
       method: 'POST',
       headers: {
