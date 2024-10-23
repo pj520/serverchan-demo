@@ -3,10 +3,11 @@ name = "server_chan"
 version = "0.1.0"
 authors = ["EasyChen <easychen@gmail.com>"]
 edition = "2021"
+license = "MIT License"
 
 [dependencies]
-reqwest = "0.11"
+reqwest = "0.12"
 serde_urlencoded = "0.7"
-tokio = { version = "1", features = ["full"] }
-dotenv = "0.15.0"
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
 regex = "1.11.0"
+dotenv = { version = "0.15.0" }
