@@ -812,7 +812,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "server_chan"
+name = "server-chan"
 version = "0.1.2"
 dependencies = [
  "dotenv",
