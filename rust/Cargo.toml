@@ -1,9 +1,12 @@
 [package]
 name = "server_chan"
-version = "0.1.1"
+description = "server_chan rust sdk"
+version = "0.1.2"
 authors = ["EasyChen <easychen@gmail.com>"]
 edition = "2021"
-license = "MIT License"
+license = "MIT"
+repository = "https://github.com/easychen/serverchan-demo"
+keywords = ["server_chan"]
 
 [dependencies]
 reqwest = "0.12"
